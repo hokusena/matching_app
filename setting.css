@@ -1,0 +1,63 @@
+body {
+    background: linear-gradient(to bottom right, rgb(143, 225, 255), rgb(204, 255, 208));
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center center;
+    background-size: cover
+}
+header{
+	color: #4d4d4d;
+    text-shadow: 4px 5px 6px #ffffff;
+    margin-top: 40px;
+}
+body {
+    padding-top: 50px; /* メニューバーの高さに応じて調整 */
+}
+
+nav {
+	list-style-type: none;
+	margin: 0;
+	padding: 0px;
+	overflow: hidden;
+	background-color: #fff;
+    display: block; 
+    position: fixed; /*ポジションを固定する*/
+    top: 0px;/*一番上に設置*/
+    left: 0px;
+    width: 100%;
+    z-index: 9999;  /*どの要素よりも上にくるように*/
+}
+li{
+	float:left ;
+	border-right: 1px solid #bbbbbb;
+}
+
+li:last-child {
+	border-right: none;
+}
+li a {
+	display: block;
+	color: rgb(5, 165, 251);
+	text-align: center;
+	padding: 14px 25%;
+	text-decoration: none;
+	transition: background-color 0.3s, color 0.3s; /* 色変化にアニメーションを追加 */
+	
+	}
+.mypage{
+	
+	background-color:  rgb(176, 249, 237); /* 背景色の変更 */
+		
+	   
+	color: rgb(5, 165, 251); /* 文字色の変更 */
+	}
+
+
+
+li a:hover:not(.active) {
+	background-color: #cacacb;
+}
+
+
+
+

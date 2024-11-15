@@ -1,0 +1,38 @@
+body {
+    background: linear-gradient(to bottom right, rgb(143, 225, 255), rgb(204, 255, 208));
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center center;
+    background-size: cover
+}
+header{
+	color: #4d4d4d;
+    margin-top: 40px;
+}
+.notification-toggle {
+    margin-bottom: 15px; /* 各セクションの間隔 */
+}
+
+.button {
+    display: inline-block; /* ボタンのように表示 */
+    padding: 10px 20px; /* 内側の余白 */
+    margin-right: 10px; /* ボタン間の余白 */
+    background-color: #f1f6f1; /* ONボタンの背景色 */
+    color: rgb(78, 234, 39); /* ONボタンの文字色 */
+    text-decoration: none; /* 下線を消す */
+    border-radius: 5px; /* 角を丸くする */
+    cursor: pointer; /* ポインタを手の形に */
+}
+
+.button input[type="radio"] {
+    display: none; /* ラジオボタンを非表示にする */
+}
+
+.button:hover {
+    background-color: #45a049; /* ホバー時の色変更 */
+}
+
+.button input[type="radio"]:checked + label {
+    background-color: #4CAF50; /* チェックされたボタンの色 */
+    color: white; /* チェックされたボタンの文字色 */
+}

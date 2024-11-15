@@ -1,0 +1,124 @@
+/* home_style.css */
+@charset "utf-8";
+
+/*========= ローディング画面のためのCSS ===============*/
+#splash {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background: #333;
+  z-index: 9999999;
+  text-align:center;
+  color:#fff;
+}
+
+#splash-logo {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+
+/*========= 画面遷移のためのCSS ===============*/
+
+/*画面遷移アニメーション*/
+
+body{
+    background:#333;/*遷移アニメーションと同じ色を指定*/
+}
+
+body.appear{
+  background: linear-gradient(to bottom right, rgb(143, 225, 255), rgb(204, 255, 208));
+}
+
+.splashbg{
+  position: fixed;
+  top: 0;
+  right:0;
+  bottom:0;
+  left: 0;
+  border-width: 0px;/*開始はボーダーの太さは0*/
+  border-style:solid;
+    border-color: #666;/*拡大する四角の色*/
+  animation-duration:.5s;
+  animation-fill-mode:forwards;
+}
+
+@keyframes backBoxAnime{
+  99.9% {/*アニメーション終了ぎりぎりまで*/
+        z-index: 2;/*最前面に*/
+    border-width: 0px;/*開始はボーダーの太さは0*/
+  }
+    100%{
+      z-index: -1; /*最背面に*/
+        border-width: 0px;/*終了はボーダーの太さは0*/
+    }
+}
+
+/*画面遷移の後現れるコンテンツ設定*/
+#container{
+    position: relative;
+  opacity: 0;/*はじめは透過0に*/
+}
+/*bodyにappearクラスがついたら出現*/
+body.appear #container{
+  animation-name:PageAnimeAppear;
+  animation-duration:1s;
+  animation-delay:0.2s;
+  animation-fill-mode:forwards;
+  opacity: 0;
+}
+
+
+@keyframes PageAnimeAppear{
+  0% {
+  opacity: 0;
+  }
+  100% {
+  opacity: 1;
+}
+
+}
+/*========= レイアウトのためのCSS ===============*/
+
+p {
+  text-align: center;
+}
+
+/* imgタグの中央揃えを追加 */
+.center-image {
+  display: inline-block;
+  margin: 0 auto;
+  width: 500px;
+  height: 230px;
+  object-fit: cover;
+  object-position: top;
+}
+
+a.home{
+  display: block;
+text-align: center;
+text-decoration: none;
+width: 240px;
+margin: auto;
+  margin-bottom: 50px;
+padding: 1rem 4rem;
+font-weight: bold;
+color:#59c7e9;
+border-bottom: 2px solid #59c7e9;
+border-radius: 100vh;
+background: #fff;
+box-shadow: 0 2px 7px rgba(0, 0, 0, .3);
+-webkit-box-shadow: 0 2px 7px rgba(0, 0, 0, .3);
+}
+a.home:hover {
+color:#fff;
+background: rgb(153, 228, 255);
+border-bottom: 2px solid #fff;
+transform: translateY(3px);
+}
+
+.shake {
+ height: 100vh;
+}

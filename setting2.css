@@ -1,0 +1,34 @@
+body {
+    background: linear-gradient(to bottom right, rgb(143, 225, 255), rgb(204, 255, 208));
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center center;
+    background-size: cover
+}
+header{
+	color: #4d4d4d;
+    margin-top: 40px;
+}
+body {
+    padding-top: 50px; /* メニューバーの高さに応じて調整 */
+}
+
+
+
+
+/* li:last-child {
+	border-right: none;
+}
+li a {
+	display: block;
+	color: #3dca7a;
+	text-align: center;
+	padding: 14px 16px;
+	text-decoration: none;
+}
+li a:hover:not(.active) {
+	background-color: #cacacb;
+}
+.active {
+	background-color: #da3c41;
+} */
